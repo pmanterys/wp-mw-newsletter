@@ -39,34 +39,7 @@ if ( 'build' == $mode ) {
     }
 
 ?>
-    <p class="crw-description" ng-show="crosswordData.description"><em><?php _e('Find these words in the riddle:', 'crw-text') ?></em> {{crosswordData.description}}</p>
-    <dl class="crw-level">
-        <dt><?php _e('Difficulty level', 'crw-text') ?> {{crosswordData.level+1}}</dt>
-<?php
-
-}
-
-?>
-        <dd><?php _e('Word directions', 'crw-text') ?>:
-            <strong ng-show="crw.getLevelRestriction('dir')"><?php _e('only to the right and down', 'crw-text') ?>,</strong>
-            <strong ng-show="!crw.getLevelRestriction('dir')"><?php _e('any, including the diagonals and backwards', 'crw-text') ?>,</strong>
-            <br /><?php _e('List of words that should be found', 'crw-text') ?>:
-            <strong ng-show="crw.getLevelRestriction('sol')"><?php _e('visible before found', 'crw-text') ?></strong>
-            <strong ng-show="!crw.getLevelRestriction('sol')"><?php _e('hidden before found', 'crw-text') ?></strong>
-        </dd>
-    </dl>
-<?php // usage instruction
-
-if ( 'build' == $mode ) {
-
-?>
-    <p class="crw-instruction"><?php _e('Fill in the the letters and mark the words:', 'crw-text') ?></p>
-<?php
-
-} elseif ( 'solve' == $mode ) {
-
-?>
-    <p class="crw-instruction"><?php _e('Mark the words:', 'crw-text') ?></p>
+    <p class="crw-description" ng-show="crosswordData.description">{{crosswordData.description}}</p>
 <?php
 
 }
