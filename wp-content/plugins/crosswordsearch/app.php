@@ -39,6 +39,7 @@ if ( 'build' == $mode ) {
     }
 
 ?>
+    <br/>
     <p class="crw-description" ng-show="crosswordData.description">{{crosswordData.description}}</p>
 
 <?php
