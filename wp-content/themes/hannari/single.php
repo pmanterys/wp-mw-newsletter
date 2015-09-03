@@ -20,7 +20,15 @@ get_header(); ?>
 								<div class="subinfopost">
 									<p class="posted">
 									<span class="date_time"><?php the_time(get_option( 'date_format' )); ?></span> /
-									<span class="postedby"><?php the_author(); ?></span> /
+									<span class="postedby">
+                                        <?php
+                                        if ( function_exists( 'coauthors' ) ) {
+                                            coauthors();
+                                        } else {
+                                            the_author();
+                                        }
+                                        ?>
+                                    </span> /
 									<span class="commentcount"><?php comments_popup_link('<span class="icon comments"></span> 0', '<span class="icon comments"></span> 1', '<span class="icon comments"></span> %', 'comment-link'); ?></span>
 									</p>
                                     <div class="clear"></div>									
